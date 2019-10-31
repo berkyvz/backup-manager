@@ -1,0 +1,1 @@
+sudo bash manager.sh
