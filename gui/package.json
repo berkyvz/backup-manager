@@ -1,0 +1,28 @@
+{
+  "name": "backup-manager-gui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/berkyvz/backup-manager.git"
+  },
+  "keywords": [
+    "backup",
+    "basic"
+  ],
+  "author": "Berk Yavuz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berkyvz/backup-manager/issues"
+  },
+  "homepage": "https://github.com/berkyvz/backup-manager#readme",
+  "devDependencies": {
+    "electron": "^7.0.1",
+    "electron-builder": "^22.1.0"
+  }
+}
