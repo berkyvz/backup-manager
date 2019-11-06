@@ -4,12 +4,48 @@
     <meta charset="UTF-8">
     <title>Backup Manager GUI</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   </head>
-  <body style="text-align: center;">
+  <body>
     
 
-    <h2 style="margin-top: 50px;">Coming Soon</h2>
-    
+    <nav class="navbar navbar-light bg-dark" style="color: white;">
+        <a class="navbar-brand" href="#">
+            <img src="asseets/ico.png" width="40" height="40" >
+            <span style="color: white;">Backup Manager</span>
+         </a>
+    </nav>
+
+    <!-- Left Side-->
+    <div class="leftside"> 
+      <p> Select path to add it them into folder-list.</p>
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <button class="btn btn-primary"> + </button>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="input01" webkitdirectory directory >
+            <label class="custom-file-label" for="input01">Choose file</label>
+          </div>
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+
+        <button class="btn btn-danger" style="width: 100%;">Remove</button>
+
+    </div>
+  
+
+    <!-- Right Side-->
+    <div class="rightside"> Right</div>
+  
   </body>
 </html>
