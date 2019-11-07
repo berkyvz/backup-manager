@@ -25,12 +25,21 @@ function createWindow () {
   win.openDevTools()
   win.loadFile('index.html')
 
+  server.use(express.json());
   server.get('/', (req, res) => {
     readSettings().then(obj => {
       res.send(obj)
     });
   });
 
+  server.post('/remove-from-list' , (req , res) => {
+    readSettings().then(settingArray => {
+      settingArray.folders.splice(req.body.index, 1);
+      writeSettings(settingArray.folders.toString()).then(
+        res.send({'status': `${req.body.value} is removed.`})
+      );
+    });
+  })
   server.listen(port, () => console.log(`App is running on port ${port}!`))
 
 
@@ -65,3 +74,9 @@ async function readSettings(){
   } 
   return obj;
 }
+
+async function writeSettings(content){
+  const writeResult = await writeFile(
+    "../folder-list.settings", content);
+   return true;
+ }

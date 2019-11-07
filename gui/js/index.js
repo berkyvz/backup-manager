@@ -19,7 +19,22 @@ function updateFileList(){
 function removeFromList(){
     let selectedItem = document.getElementsByClassName("selected")[0];
     selectedItem.remove();
-    console.log(selectedItem.getAttribute("item-index"));
+    let index = selectedItem.getAttribute("item-index");
+    let value = selectedItem.lastChild;
+    var obj = { 'index' : index,
+                'value' : value.data
+            };
+    console.log(obj);
+    fetch('http://localhost:3000/remove-from-list', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(obj)
+       }).then(res => res.json()).then( data =>  {
+            alert(`Message: ${data.status}`);
+        });
 }
 
 function itemClicked(e){
