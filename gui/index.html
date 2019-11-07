@@ -5,7 +5,6 @@
     <title>Backup Manager GUI</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="style/index.css">
-    <script src="js/index.js"></script>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   </head>
   <body>
@@ -31,21 +30,23 @@
           </div>
         </div>
 
-        <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+        <ul id="file-list" class="list-group">
+            <li>Loading</li>
         </ul>
 
-        <button class="btn btn-danger" style="width: 100%;">Remove</button>
+        <button onclick="removeFromList()" class="btn btn-danger" style="width: 100%;">Remove</button>
+        <button onclick="updateFileList();" class="btn btn-primary" style="width: 100%;">Update List</button>
 
     </div>
   
 
     <!-- Right Side-->
     <div class="rightside"> Right</div>
-  
+
+
+
+
+    <!-- Scripts-->
+    <script src="js/index.js"></script>
   </body>
 </html>
