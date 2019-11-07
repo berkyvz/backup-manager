@@ -35,6 +35,8 @@ function removeFromList(){
        }).then(res => res.json()).then( data =>  {
             alert(`Message: ${data.status}`);
         });
+
+    updateFileList();
 }
 
 function itemClicked(e){
