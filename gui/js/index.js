@@ -50,4 +50,26 @@ function itemClicked(e){
     e.target.classList.add('selected');
 }
 
+
+function addToList(e){
+    var element = document.getElementById("list-item");
+
+    var obj = {'path': element.value};
+    
+    fetch('http://localhost:3000/add-file', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(obj)
+       }).then(res => res.json()).then( data =>  {
+        alert(`Message: ${data.status}`);
+        });
+
+        updateFileList();
+        element.value = "";
+    
+}
+
 updateFileList();

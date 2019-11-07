@@ -22,12 +22,9 @@
       <p> Select path to add it them into folder-list.</p>
       <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <button class="btn btn-primary"> + </button>
+            <button onclick="addToList(event)" class="btn btn-primary"> + </button>
           </div>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="input01" webkitdirectory directory >
-            <label class="custom-file-label" for="input01">Choose file</label>
-          </div>
+          <input id="list-item" class="form-control" type="text" placeholder="Full Path of The Folder">
         </div>
 
         <ul id="file-list" class="list-group">
@@ -41,7 +38,12 @@
   
 
     <!-- Right Side-->
-    <div class="rightside"> Right</div>
+    <div class="rightside"> 
+      
+      <p> Select path for backup destination</p>
+      
+
+    </div>
 
 
 

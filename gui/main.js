@@ -39,7 +39,18 @@ function createWindow () {
         res.send({'status': `${req.body.value} is removed.`})
       );
     });
-  })
+  });
+
+  server.post('/add-file' , (req , res) => {
+    readSettings().then(settingArray => {
+      const newPath = req.body.path.toString();
+      const newFileContent = `${settingArray.folders.toString()},${newPath}`.replace("\n","");
+      writeSettings(newFileContent).then(a => {
+        res.send({'status': `${req.body.path} is added.`})
+      })
+  });
+});
+
   server.listen(port, () => console.log(`App is running on port ${port}!`))
 
 
