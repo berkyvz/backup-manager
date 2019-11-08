@@ -1,8 +1,10 @@
 ## About Project
-
+Only for Linux based OS.
 
 In this project I used `ElectronJS`, `ExpressJS` and `ShellScript` (sh) to improve myself.
 
+
+> do not forget to run `npm install` inside gui folder.
 
 ## With Gui
  

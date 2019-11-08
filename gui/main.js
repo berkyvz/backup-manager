@@ -24,7 +24,6 @@ function createWindow() {
     }
   });
   new Menu.setApplicationMenu(null);
-  win.openDevTools()
   win.loadFile('index.html')
 
   server.use(express.json());
