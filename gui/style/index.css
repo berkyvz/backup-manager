@@ -28,6 +28,10 @@ p {
     margin-bottom: 10px;
 }
 
+#file-list{
+    margin-bottom: 16px;
+}
+
 #file-list > li {
     cursor: pointer;
 }
