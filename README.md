@@ -1,3 +1,21 @@
+## About Project
+
+
+In this project I used `ElectronJS`, `ExpressJS` and `ShellScript` (sh) to improve myself.
+
+
+## With Gui
+ 
+ 1. Clone the repository.
+
+ 2. Run ` ./run.sh ` on terminal.
+
+ 2. Add and Remove full paths of the folders that needs to be backed up.
+
+ 3. Change the backup destination directory.
+
+ 4. Press Run Backup
+
 ## Simple Backup
 
 1. Clone the repository.

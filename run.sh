@@ -1,1 +1,2 @@
-sudo bash manager.sh
+cd gui
+npm start

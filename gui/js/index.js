@@ -67,6 +67,7 @@ function removeFromList() {
         updateFileList();
     } catch (error) {
         console.log("HATA OLUŞTU");
+        progress(false);
     }
 
 }

@@ -15,6 +15,7 @@ mkdir -p $full_destination_path
 read -ra ADDR <<< "$folder_list" 
 for i in "${ADDR[@]}"; do 
     cp -R "$i" "$full_destination_path"
+    echo "$i" "$full_destination_path"
 done
 
 echo "Backup Complete."
